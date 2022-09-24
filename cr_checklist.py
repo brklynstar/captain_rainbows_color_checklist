@@ -63,7 +63,7 @@ def select(function_code):
     # #UNKKNOWN OPTION    
     else:
         print("Unknown Option")
-        return True
+    return True
 
 
 def user_input(prompt):
