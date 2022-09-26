@@ -20,6 +20,11 @@ def update(index, item):
 def destroy(index):
     checklist.pop(index)
 
+# #Define CHECK Function
+# def check(index,item):
+#     item = checklist[index]
+#     update(index, "√" + item)
+
 #Define List All Items
 def list_all_items():
     index = 0
@@ -55,6 +60,12 @@ def select(function_code):
         item_index = int(user_input("Which index would you like to delete: "))
         destroy(item_index)
   
+    #CHECKMARK
+    elif function_code == "C":
+        item_index = int(user_input("Which index to checkmark? "))
+        if (item_index)
+
+        
     #DISPLAY ALL ITEMS
     elif function_code == "P":
         list_all_items()
