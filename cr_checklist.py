@@ -2,37 +2,37 @@
 print()
 checklist = list()
 
-# Define Functions
-#Create function is going to add the input of item and append it to the checklist
+
+#Define CREATE Function
 def create(item):
   checklist.append(item)
 
-# Read function will return the value that lives at that index in our checklist and save it in item
+#Define READ Function 
 def read(index):
     item = checklist[index]
     return item
 
-#Update function is overwriting the data located in the second position of the list
+#Define UPDATE Function 
 def update(index, item):
     checklist[index] = item
 
-#Destroy function is going to remove designated input value of index
+#Define DESTROY Function 
 def destroy(index):
     checklist.pop(index)
 
-# For loop will iterate (perform repeatedly)over all items in checklist and pass each value into code block below it as the value listitem
-#
+#Define List All Items
 def list_all_items():
     index = 0
     for list_item in checklist:
         print("{} {}".format(index, list_item))
         index += 1
 
-
+#Define User Iput
 def user_input(prompt):
     user_input = input(prompt).lower().upper()
     return user_input
 
+#Define SELECT Function 
 def select(function_code):
     #ADD ITEM
     if function_code == "A":
@@ -50,8 +50,6 @@ def select(function_code):
         input_item = (user_input("Input update: "))
         update(item_index, input_item)
         
-
-
     #DESTROY ITEM
     elif function_code == "D":
         item_index = int(user_input("Which index would you like to delete: "))
@@ -65,9 +63,9 @@ def select(function_code):
     elif function_code == "Q":
          return False
 
-    # #UNKKNOWN OPTION    
+    #UNKKNOWN OPTION    
     else:
-        print("Unknown Option")
+        print("UNKNOWN OPTION")
     return True
 
 
